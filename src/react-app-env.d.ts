@@ -1,7 +1,5 @@
 /// <reference types="react-scripts" />
 
-export interface CustomWindow extends Window {
-  r3e?: {
-
-  };
-}
+export type R3eApi = {
+  driversInfo: (callback: (driversInfo: any) => void) => void;
+};

@@ -1,5 +1,5 @@
-import {extendTheme} from '@chakra-ui/react';
-import {button} from './components/button';
+import { extendTheme } from '@chakra-ui/react';
+import { button } from './components/button';
 
 const baseTheme = extendTheme({
   semanticTokens: {
@@ -12,14 +12,11 @@ const baseTheme = extendTheme({
       secondary: {
         default: '#2632387F',
       },
-      text: {
-        default: '#fff',
-      },
     },
   },
   components: {
     button,
-  }
+  },
 });
 
-export {baseTheme};
+export { baseTheme };
