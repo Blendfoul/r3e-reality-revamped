@@ -1,17 +1,21 @@
 import { Td, Tr } from '@chakra-ui/react';
+import { IDriver } from '../../tools/r3e';
+import { DamageColumn } from './damageColumn';
 
-const DriverRow: React.FC = () => {
+const DriverRow: React.FC<IDriver> = ({ base, vehicleInfo, pitInfo }) => {
   return (
     <Tr>
-      <Td isNumeric>1</Td>
-      <Td isNumeric>1</Td>
-      <Td>João Castanheira</Td>
-      <Td>Bonnet</Td>
-      <Td isNumeric>250</Td>
-      <Td isNumeric>0</Td>
-      <Td>Yes</Td>
-      <Td isNumeric>90</Td>
-      <Td isNumeric>0</Td>
+      <Td isNumeric>{base.scoreInfo.positionRaceGridClass}</Td>
+      <Td isNumeric>{base.scoreInfo.laps}</Td>
+      <Td>{base.name}</Td>
+      <Td>Camera</Td>
+      <Td isNumeric>{vehicleInfo.speed}</Td>
+      <Td isNumeric>{pitInfo.numPitstops}</Td>
+      <Td>{pitInfo.servedMandatoryPitstop}</Td>
+      <Td isNumeric>{pitInfo.tyreType}</Td>
+      <Td>
+        <DamageColumn {...pitInfo.damage} />
+      </Td>
       <Td>Green</Td>
       <Td>No</Td>
       <Td>No</Td>
