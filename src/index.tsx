@@ -4,7 +4,6 @@ import { ChakraProvider } from '@chakra-ui/react';
 import { BrowserRouter } from 'react-router-dom';
 import App from './app';
 import reportWebVitals from './reportWebVitals';
-import * as ServiceWorker from './serviceWorker';
 import { baseTheme } from './themes/base/baseTheme';
 import './tools/bootstrap-i18n';
 
@@ -25,4 +24,3 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
-ServiceWorker.register();
