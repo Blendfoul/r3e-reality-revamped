@@ -370,16 +370,13 @@ export const r3e = (function r3eBridge() {
     };
   };
 
-  type ListenerKeys = 'resultsUpdate' | 'eventOccurred';
-
-  const listener = (opts: { pool: ListenerKeys; persistent: boolean }) => {
+  const listener = (opts: { pool: RequestPoolKeys; persistent: boolean }) => {
     return function listeners(callback: any) {
-      const pool = getRequestPool[opts.pool]();
+      //param is never really used just so Ts doesn't cry
+      const pool = getRequestPool[opts.pool]({ slotId: 0 });
 
       // Set property on array so it doesn't get cleared
-      // @ts-ignore
       pool.persistent = true;
-      // @ts-ignore
       pool.push(callback);
     };
   };
