@@ -1,0 +1,19 @@
+{
+  "root": true,
+  "plugins": [
+    "unicorn"
+  ],
+  "extends": [
+    "react-app"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "curly": "error",
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"]
+  }
+}

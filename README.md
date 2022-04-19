@@ -1,7 +1,6 @@
-# Getting Started with Create React App
+# R3e Reality Revamped
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+This project was heavily inspired on the existing R3e Reality project 
 ## Available Scripts
 
 In the project directory, you can run:
