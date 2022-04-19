@@ -16,8 +16,9 @@ const TableHead: React.FC = () => {
         <Th>Flags</Th>
         <Th>PTP</Th>
         <Th>DRS</Th>
-        <Th isNumeric>Sector 1</Th>
-        <Th isNumeric>Sector 2</Th>
+        <Th>S 1</Th>
+        <Th>S 2</Th>
+        <Th>S 3</Th>
         <Th>Best Lap</Th>
         <Th>Last Lap</Th>
       </Tr>

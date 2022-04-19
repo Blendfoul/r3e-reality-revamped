@@ -15,8 +15,9 @@ const DriverRow: React.FC = () => {
       <Td>Green</Td>
       <Td>No</Td>
       <Td>No</Td>
-      <Td isNumeric>25.500</Td>
-      <Td isNumeric>42.432</Td>
+      <Td>25.500</Td>
+      <Td>42.432</Td>
+      <Td>32.432</Td>
       <Td>1.12,523</Td>
       <Td>1.12,854</Td>
     </Tr>
