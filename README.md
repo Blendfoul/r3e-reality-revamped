@@ -1,6 +1,7 @@
 # R3e Reality Revamped
 
 This project was heavily inspired on the existing [R3e Reality project](https://github.com/R3E-Reality/rre-spec). 
+### This still is a work in progress feel free to contribute
 ## Available Scripts
 
 In the project directory, you can run:

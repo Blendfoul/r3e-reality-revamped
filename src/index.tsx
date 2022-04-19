@@ -6,6 +6,7 @@ import App from './app';
 import reportWebVitals from './reportWebVitals';
 import * as ServiceWorker from './serviceWorker';
 import { baseTheme } from './themes/base/baseTheme';
+import './tools/bootstrap-i18n';
 
 const container = document.getElementById('root') as HTMLElement;
 const root = createRoot(container);

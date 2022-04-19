@@ -6,19 +6,30 @@ import {
   HStack,
   IconButton,
   useDisclosure,
-  Select
+  Select,
 } from '@chakra-ui/react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { SettingsModal } from './settingsModal';
+import { useTranslation } from 'react-i18next';
 
 const Navbar: React.FC = () => {
-  const {isOpen, onClose, onOpen} = useDisclosure();
+  const { isOpen, onClose, onOpen } = useDisclosure();
+  const { t } = useTranslation();
 
   return (
     <>
-      <Flex justifyContent="space-between" flexDirection="row" p={2.5} bgColor="primary">
+      <Flex
+        justifyContent="space-between"
+        flexDirection="row"
+        p={2.5}
+        bgColor="primary"
+      >
         <HStack>
-          <IconButton icon={<SettingsIcon />} aria-label="Settings" onClick={onOpen} />
+          <IconButton
+            icon={<SettingsIcon />}
+            aria-label="Settings"
+            onClick={onOpen}
+          />
           <Select color="text">
             <option>Raceroom base</option>
           </Select>
@@ -26,13 +37,13 @@ const Navbar: React.FC = () => {
         <HStack>
           <ButtonGroup>
             <Link to="/">
-              <Button>Home</Button>
+              <Button>{t('navbar.home')}</Button>
             </Link>
             <Link to="dashboard">
-              <Button>Dashboard</Button>
+              <Button>{t('navbar.dashboard')}</Button>
             </Link>
             <Link to="overview">
-              <Button>Overview</Button>
+              <Button>{t('navbar.overview')}</Button>
             </Link>
           </ButtonGroup>
         </HStack>
@@ -42,4 +53,4 @@ const Navbar: React.FC = () => {
   );
 };
 
-export {Navbar};
+export { Navbar };

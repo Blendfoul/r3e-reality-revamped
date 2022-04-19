@@ -1,0 +1,33 @@
+{
+  "translation": {
+    "navbar": {
+      "home": "Home",
+      "dashboard": "Dashboard",
+      "overview": "Overview"
+    },
+    "dashboard": {
+      "lapsLeft": "{{laps}} Estimated laps left",
+      "interestingEvents": "Interesting Events",
+      "incidents": "Incidents"
+    },
+    "home": {
+      "position": "Position",
+      "lap": "Lap",
+      "driver": "Driver",
+      "camera": "Camera",
+      "speed": "Speed (Km/h)",
+      "pitCount": "Pit Count",
+      "mandatoryPit": "Mandatory Pit",
+      "tireWear": "Tire Wear",
+      "damage": "Damage",
+      "flags": "Flags",
+      "ptp": "PTP",
+      "drs": "DRS",
+      "sectorOne": "Sector 1",
+      "sectorTwo": "Sector 2",
+      "sectorThree": "Sector 3",
+      "bestLap": "Best Lap",
+      "lastLap": "Last Lap"
+    }
+  }
+}
