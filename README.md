@@ -1,6 +1,5 @@
-# R3e Reality Revamped
+# R3e Spectator dashboard
 
-This project was heavily inspired on the existing [R3e Reality project](https://github.com/R3E-Reality/rre-spec). 
 ### This still is a work in progress feel free to contribute
 ## Available Scripts
 
@@ -26,3 +25,14 @@ Your app is ready to be deployed!
 
 Runs the app in production mode.
 Open [http://localhost:4000](http://localhost:4000) to view it in the browser.
+
+## How to use in game
+
+* Download RaceRoom Racing Experience from Steam
+* Go into the game's Properties in the Steam client and change "SET LAUNCH OPTIONS..." to:
+  * -webDev -broadcastUrl=http://localhost:3000/ **Dev mode**
+  * -broadcastUrl=http://localhost:4000/
+* Start RaceRoom Racing Experience
+* Enter the Multiplayer server list though the game menus
+* Join the server you want to spectate 
+  * **There are no requirements to own the content used on the server**
