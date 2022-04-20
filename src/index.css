@@ -1,0 +1,17 @@
+body,
+html {
+    font-size: 13px;
+    font-weight: bold;
+    background: transparent;
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+}
+
+#root {
+    background: transparent;
+}
+
+.chakra-ui-light {
+    background: transparent !important;
+}

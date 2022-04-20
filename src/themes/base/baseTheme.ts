@@ -2,6 +2,16 @@ import { extendTheme } from '@chakra-ui/react';
 import { button } from './components/button';
 
 const baseTheme = extendTheme({
+  styles: {
+    globals: {
+      div: {
+        bg: 'red.500'
+      },
+      body: {
+        bg: 'red.500'
+      }
+    },
+  },
   semanticTokens: {
     colors: {
       error: 'red.500',

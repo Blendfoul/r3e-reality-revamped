@@ -1,18 +1,13 @@
-import { useEffect } from 'react';
-import { r3e } from '../tools/r3e';
+import { Flex } from '@chakra-ui/react';
+import { Driver, Tower } from '../widget';
 
 const Spectator: React.FC = () => {
-  useEffect(() => {
-    const fetchDrivers = async () => {
-      const data = await r3e.getDriversInfo();
-
-      console.log(data);
-    };
-
-    fetchDrivers();
-  }, []);
-
-  return null;
+  return (
+    <Flex bgColor="transparent">
+      <Tower />
+      <Driver />
+    </Flex>
+  );
 };
 
 export default Spectator;
