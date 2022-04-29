@@ -3,6 +3,7 @@ import {
   IGetDriversInfo,
   IGetSessionInfo,
   IGetVehicleInfo,
+  IUserInfo,
   r3e,
 } from '../../tools/r3e';
 
@@ -22,20 +23,20 @@ export const raceRoomApi = createApi({
       data: r3e[args](),
     };
   },
-
   endpoints: (build) => ({
-    getDriversInfo: build.query<IGetDriversInfo, RaceRoomApiKeys>({
-      query: (arg) => arg,
+    getDriversInfo: build.query<IGetDriversInfo, void>({
+      query: () => RaceRoomApiKeys.GET_DRIVERS_INFO,
     }),
-    getDriverInfo: build.query<IGetDriversInfo, RaceRoomApiKeys>({
-      query: (arg) => arg,
+    getDriverInfo: build.query<IGetDriversInfo, void>({
+      query: () => RaceRoomApiKeys.GET_DRIVER_INFO,
     }),
-    getVehicleInfo: build.query<IGetVehicleInfo, RaceRoomApiKeys>({
-      query: (arg) => arg,
+    getVehicleInfo: build.query<IGetVehicleInfo, void>({
+      query: () => RaceRoomApiKeys.GET_VEHICLE_INFO,
     }),
-    getSessionInfo: build.query<IGetSessionInfo, RaceRoomApiKeys>({
-      query: (arg) => arg,
+    getSessionInfo: build.query<IGetSessionInfo, void>({
+      query: () => RaceRoomApiKeys.GET_SESSION_INFO,
     }),
+    getUserInfo: build.query<IUserInfo, number>({}),
   }),
 });
 

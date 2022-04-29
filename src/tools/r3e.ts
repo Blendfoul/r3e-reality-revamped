@@ -231,6 +231,20 @@ interface ISlotSelection {
   slotId: number;
 }
 
+export type IUserInfo = {
+  username: string;
+  vip: boolean;
+  name: string;
+  team: string;
+  country: {
+    code: string;
+    name: string;
+  };
+  developer: boolean;
+  id: number;
+  avatar: string;
+};
+
 export type RequestPoolKeys =
   | 'vehicleInfo'
   | 'pitInfo'

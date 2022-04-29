@@ -1,12 +1,9 @@
 import React from 'react';
-import {
-  RaceRoomApiKeys,
-  useGetDriversInfoQuery,
-} from '../../store/spectator/api';
+import { useGetDriversInfoQuery } from '../../store/spectator/api';
 import { Grid, Text } from '@chakra-ui/react';
 
 const Tower: React.FC = () => {
-  const { data } = useGetDriversInfoQuery(RaceRoomApiKeys.GET_DRIVERS_INFO, {
+  const { data } = useGetDriversInfoQuery(undefined, {
     pollingInterval: 1000,
   });
 

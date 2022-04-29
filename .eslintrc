@@ -4,16 +4,12 @@
     "unicorn"
   ],
   "extends": [
-    "react-app"
+    "react-app",
+    "prettier"
   ],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
     }
-  },
-  "rules": {
-    "curly": "error",
-    "quotes": ["error", "single"],
-    "semi": ["error", "always"]
   }
 }

@@ -1,19 +1,35 @@
 import React from 'react';
-import {
-  RaceRoomApiKeys,
-  useGetDriverInfoQuery,
-} from '../../store/spectator/api';
-import { Grid, Text } from '@chakra-ui/react';
+import { VStack } from '@chakra-ui/react';
+import { useGetDriverInfoQuery } from '../../store/spectator/api';
+import SectorTimes from './components/sector-times';
+import DriverDetails from './components/driver-details';
+import Car from './components/car';
 
 const Driver: React.FC = () => {
-  const { data } = useGetDriverInfoQuery(RaceRoomApiKeys.GET_DRIVER_INFO, {
-    pollingInterval: 1000,
-  });
+  const { data } = useGetDriverInfoQuery(undefined, { pollingInterval: 1000 });
+
+  const driver = data?.driversInfo[0];
+
+  if (!driver) return null;
 
   return (
-    <Grid position="absolute" bottom={100} left="50%">
-      <Text>{JSON.stringify(data)}</Text>
-    </Grid>
+    <VStack
+      position="absolute"
+      bottom={50}
+      marginLeft="auto"
+      marginRight="auto"
+      left={0}
+      right={0}
+      width={600}
+    >
+      <Car
+        liveryId={
+          'https://prod.r3eassets.com/assets/content/carlivery/tmu-group-303-4957-image-big.webp'
+        }
+      />
+      <DriverDetails driver={driver} />
+      <SectorTimes sectorTimes={null} />
+    </VStack>
   );
 };
 

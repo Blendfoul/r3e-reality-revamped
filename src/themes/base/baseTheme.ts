@@ -5,11 +5,11 @@ const baseTheme = extendTheme({
   styles: {
     globals: {
       div: {
-        bg: 'red.500'
+        bg: 'red.500',
       },
       body: {
-        bg: 'red.500'
-      }
+        bg: 'red.500',
+      },
     },
   },
   semanticTokens: {
@@ -22,6 +22,10 @@ const baseTheme = extendTheme({
       secondary: {
         default: '#2632387F',
       },
+      text: 'white',
+      session: 'purple.500',
+      personal: 'green.500',
+      slower: '#EFB700',
     },
   },
   components: {
